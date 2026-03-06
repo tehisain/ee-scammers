@@ -14,17 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # Phase 3 inserts here:
-      #   - uses: actions/setup-node@v4
-      #     with:
-      #       node-version: 'lts/*'
-      #       cache: 'npm'
-      #   - run: npm ci
-      #   - run: npm run build
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+      - run: npm ci
+      - run: npx playwright install chromium --with-deps
+      - run: npm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .   # Phase 3 replaces with: dist/
+          path: dist/
 
   deploy:
     needs: build
