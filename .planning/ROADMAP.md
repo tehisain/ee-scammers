@@ -25,7 +25,14 @@ Three phases deliver the site end-to-end. First, scrapers are built and validate
   2. Running the scraper script locally produces scam loss entries for the months where police articles exist, with null for months with no article
   3. The JSON file passes Zod schema validation — no missing fields, no wrong types
   4. Both scrapers complete without error when run in sequence and the output file is committed to the repo
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Bootstrap project: package.json, Zod schema, src/data/ directory
+- [ ] 01-02-PLAN.md — Pension API scraper: fetchPensionData() with two-step period lookup
+- [ ] 01-03-PLAN.md — Police discovery pass: read 10+ live articles, document EUR patterns
+- [ ] 01-04-PLAN.md — Police scraper: Playwright pagination, Cheerio extraction, fetchPoliceData()
+- [ ] 01-05-PLAN.md — Orchestrator + committed JSON: scrape.ts merges data, writes chart-data.json
 
 ### Phase 2: Automation
 **Goal**: The data pipeline runs nightly without manual intervention and the site is reachable at a public URL
@@ -56,6 +63,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scrapers | 0/TBD | Not started | - |
+| 1. Scrapers | 0/5 | Not started | - |
 | 2. Automation | 0/TBD | Not started | - |
 | 3. Site | 0/TBD | Not started | - |
