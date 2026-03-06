@@ -12,7 +12,7 @@ Three phases deliver the site end-to-end. First, scrapers are built and validate
 
 - [x] **Phase 1: Scrapers** - Build and validate both data scrapers; produce real committed JSON (completed 2026-03-06)
 - [x] **Phase 2: Automation** - Wire nightly GitHub Actions pipeline and GitHub Pages deploy (completed 2026-03-06)
-- [ ] **Phase 3: Site** - Build the Astro site with chart, Estonian copy, and all trust signals
+- [x] **Phase 3: Site** - Build the Astro site with chart, Estonian copy, and all trust signals (completed 2026-03-06)
 
 ## Phase Details
 
@@ -74,4 +74,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Scrapers | 5/5 | Complete   | 2026-03-06 |
 | 2. Automation | 2/2 | Complete   | 2026-03-06 |
-| 3. Site | 2/3 | In Progress|  |
+| 3. Site | 3/3 | Complete   | 2026-03-06 |

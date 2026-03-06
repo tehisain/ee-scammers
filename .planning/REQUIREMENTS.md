@@ -24,7 +24,7 @@
 - [x] **SITE-01**: All UI text, labels, and explanations are in Estonian
 - [x] **SITE-02**: Data source attribution with links to politsei.ee and pensionikeskus.ee
 - [x] **SITE-03**: Methodology section explains in plain language how data is collected, parsed, and aggregated
-- [ ] **SITE-04**: Open Graph meta tags with a static chart preview image for social sharing (Facebook, Telegram, Messenger)
+- [x] **SITE-04**: Open Graph meta tags with a static chart preview image for social sharing (Facebook, Telegram, Messenger)
 - [x] **SITE-05**: Site deployed to GitHub Pages via GitHub Actions
 
 ## v2 Requirements
@@ -67,7 +67,7 @@
 | SITE-01 | Phase 3 | Complete |
 | SITE-02 | Phase 3 | Complete |
 | SITE-03 | Phase 3 | Complete |
-| SITE-04 | Phase 3 | Pending |
+| SITE-04 | Phase 3 | Complete |
 
 **Coverage:**
 - v1 requirements: 13 total
