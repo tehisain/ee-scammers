@@ -58,7 +58,12 @@ Plans:
   3. A plain-text Estonian summary sentence below the chart states the current month's comparison (e.g. percentage of pension contributions lost to scams)
   4. The page includes attribution links to both source sites and a methodology section in Estonian explaining how data is collected
   5. Sharing the URL on Facebook, Telegram, or Messenger renders a chart preview image via Open Graph meta tags
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 03-W0-PLAN.md — Test scaffold: vitest install, summarySentence() pure function + tests, page smoke test stub
+- [ ] 03-01-PLAN.md — Astro site: index.astro with Chart.js dual-line chart, Estonian copy, attribution, methodology, OG head
+- [ ] 03-02-PLAN.md — OG screenshot + deploy.yml: og-screenshot.ts post-build step, complete deploy workflow, human visual check
 
 ## Progress
 
@@ -69,4 +74,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Scrapers | 5/5 | Complete   | 2026-03-06 |
 | 2. Automation | 2/2 | Complete   | 2026-03-06 |
-| 3. Site | 0/TBD | Not started | - |
+| 3. Site | 0/3 | Not started | - |
