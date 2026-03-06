@@ -25,7 +25,7 @@
 - [ ] **SITE-02**: Data source attribution with links to politsei.ee and pensionikeskus.ee
 - [ ] **SITE-03**: Methodology section explains in plain language how data is collected, parsed, and aggregated
 - [ ] **SITE-04**: Open Graph meta tags with a static chart preview image for social sharing (Facebook, Telegram, Messenger)
-- [ ] **SITE-05**: Site deployed to GitHub Pages via GitHub Actions
+- [x] **SITE-05**: Site deployed to GitHub Pages via GitHub Actions
 
 ## v2 Requirements
 
@@ -59,7 +59,7 @@
 | PIPE-02 | Phase 1 | Complete |
 | PIPE-03 | Phase 1 | Complete (01-01) |
 | PIPE-04 | Phase 2 | Complete |
-| SITE-05 | Phase 2 | Pending |
+| SITE-05 | Phase 2 | Complete |
 | VIZ-01 | Phase 3 | Pending |
 | VIZ-02 | Phase 3 | Pending |
 | VIZ-03 | Phase 3 | Pending |

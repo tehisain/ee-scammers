@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-06T12:45:31.355Z"
+stopped_at: "02-02 checkpoint: Task 1 complete, awaiting GitHub Pages source config"
+last_updated: "2026-03-06T12:46:01.810Z"
 last_activity: 2026-03-06 — Plan 01-01 complete
 progress:
   total_phases: 3
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
   percent: 10
 ---
 
@@ -76,6 +76,7 @@ Recent decisions affecting current work:
 - [Phase 02-automation]: Used liskin/gh-workflow-keepalive@v1 (gautamkrishnar/keepalive-workflow is ToS-suspended)
 - [Phase 02-automation]: [02-01]: Keepalive job guarded by github.event_name == 'schedule' to skip on workflow_dispatch
 - [Phase 02-automation]: [02-01]: Data commit includes [skip ci] to prevent deploy.yml triggering on nightly scrape
+- [Phase 02-automation]: Used actions/deploy-pages@v4 (v3 deprecated Jan 30 2025); OIDC deploy via environment: github-pages; paths-ignore: src/data/** prevents data commits triggering deploys; temporary artifact path: . to be replaced by dist/ in Phase 3
 
 ### Pending Todos
 
@@ -88,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-06T12:45:31.353Z
-Stopped at: Completed 02-01-PLAN.md
+Last session: 2026-03-06T12:45:58.329Z
+Stopped at: 02-02 checkpoint: Task 1 complete, awaiting GitHub Pages source config
 Resume file: None
