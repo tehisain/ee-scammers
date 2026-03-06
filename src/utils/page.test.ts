@@ -23,6 +23,6 @@ describe('page smoke tests (require npm run build first)', () => {
 
   test('methodology section present (SITE-03)', () => {
     if (!fs.existsSync(distHtml)) return;
-    expect(html).toContain('andmete kogumise');
+    expect(html.toLowerCase()).toContain('andmete kogumise');
   });
 });

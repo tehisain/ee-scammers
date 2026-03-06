@@ -1,0 +1,129 @@
+---
+import chartData from '../data/chart-data.json';
+import { summarySentence } from '../utils/summary';
+
+const summary = summarySentence(chartData.months);
+const ogImage = new URL('og-preview.png', Astro.site).toString();
+---
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kui palju petturid varastavad?</title>
+    <meta property="og:title" content="Kui palju petturid varastavad?" />
+    <meta property="og:description" content="Pettusekahju vs teise pensionisamba maksed Eestis" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.toString()} />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 800px;
+        margin: auto;
+        padding: 1rem;
+      }
+      .chart-container {
+        height: 400px;
+      }
+      @media (max-width: 480px) {
+        .chart-container {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kui palju petturid varastavad?</h1>
+    <div class="chart-container"><canvas id="chart"></canvas></div>
+    {summary && <p class="summary">{summary}</p>}
+    <section class="attribution">
+      <h2>Andmeallikad</h2>
+      <p>Pettusekahju: <a href="https://www.politsei.ee/et/nouanded/pettused" target="_blank" rel="noopener">politsei.ee</a> – politsei pressiteated pettusejuhtumite kohta.</p>
+      <p>Pensionimaksed: <a href="https://www.pensionikeskus.ee" target="_blank" rel="noopener">pensionikeskus.ee</a> – II samba sissemaksete statistika.</p>
+    </section>
+    <section class="methodology">
+      <h2>Metoodika</h2>
+      <p>Pettusekahju andmed kogutakse automaatselt politsei.ee pressiteadetest kord ööpäevas. Iga teate teksti analüüsitakse regulaaravaldistega, et eraldada kogukahju eurodes. Kui kuus ilmub mitu teadet, liidetakse summad kokku.</p>
+      <p>Pensionimaksete andmed pärinevad pensionikeskus.ee avalikust JSON-liidesest, mis avaldab II samba sissemaksete kuustatistika. Summeeritakse kõikide fondide ja mõlema liigi (F – investeerimisfondid, P – PIK-kontod) maksed.</p>
+      <p>Andmete kogumise skripti lähtekood on avalikult kättesaadav selles <a href="https://github.com/maidok/ee-scammers" target="_blank" rel="noopener">GitHubi hoidlas</a>. Andmeid uuendatakse iga ööpäev kell 03:00 UTC.</p>
+    </section>
+    <script type="application/json" id="chart-data" set:text={JSON.stringify(chartData)}></script>
+    <script>
+      import Chart from 'chart.js/auto';
+
+      const raw = JSON.parse(document.getElementById('chart-data')!.textContent!);
+      const months = raw.months as Array<{ month: string; pensionEur: number; scamEur: number | null }>;
+
+      const labels = months.map((m: any) => {
+        const [year, mon] = m.month.split('-');
+        const MONTH_SHORT: Record<string, string> = {
+          '01':'jaan','02':'veebr','03':'märts','04':'apr','05':'mai','06':'juuni',
+          '07':'juuli','08':'aug','09':'sept','10':'okt','11':'nov','12':'dets'
+        };
+        return `${MONTH_SHORT[mon] ?? mon} ${year}`;
+      });
+
+      const canvas = document.getElementById('chart') as HTMLCanvasElement;
+      new Chart(canvas, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Pensionimaksed',
+              data: months.map((m: any) => m.pensionEur === 0 ? null : m.pensionEur),
+              borderColor: '#2563eb',
+              backgroundColor: 'transparent',
+              pointRadius: 4,
+              spanGaps: true,
+            },
+            {
+              label: 'Pettusekahju',
+              data: months.map((m: any) => m.scamEur),
+              borderColor: '#dc2626',
+              backgroundColor: 'transparent',
+              pointRadius: 4,
+              spanGaps: true,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          animation: {
+            onComplete: () => {
+              (document.getElementById('chart') as HTMLCanvasElement).dataset.chartReady = 'true';
+            }
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: (ctx: any) => {
+                  const val = ctx.raw as number | null;
+                  if (val === null) return `${ctx.dataset.label}: andmed puuduvad`;
+                  return `${ctx.dataset.label}: ${val.toLocaleString('et-EE')} €`;
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                callback: (v: any) => `${(v / 1_000_000).toFixed(0)} M€`
+              }
+            }
+          }
+        }
+      });
+
+      canvas.addEventListener('animationend', () => {
+        canvas.dataset.chartReady = 'true';
+      });
+    </script>
+  </body>
+</html>
