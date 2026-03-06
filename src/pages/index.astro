@@ -48,7 +48,7 @@ const ogImage = new URL('/ee-scammers/og-preview.png', Astro.site).toString();
       <h2>Metoodika</h2>
       <p>Pettusekahju andmed kogutakse automaatselt politsei.ee pressiteadetest kord ööpäevas. Iga teate teksti analüüsitakse regulaaravaldistega, et eraldada kogukahju eurodes. Kui kuus ilmub mitu teadet, liidetakse summad kokku.</p>
       <p>Pensionimaksete andmed pärinevad pensionikeskus.ee avalikust JSON-liidesest, mis avaldab II samba sissemaksete kuustatistika. Summeeritakse kõikide fondide ja mõlema liigi (F – investeerimisfondid, P – PIK-kontod) maksed.</p>
-      <p>Andmete kogumise skripti lähtekood on avalikult kättesaadav selles <a href="https://github.com/maidok/ee-scammers" target="_blank" rel="noopener">GitHubi hoidlas</a>. Andmeid uuendatakse iga ööpäev kell 03:00 UTC.</p>
+      <p>Andmete kogumise skripti lähtekood on avalikult kättesaadav selles <a href="https://github.com/tehisain/ee-scammers" target="_blank" rel="noopener">GitHubi hoidlas</a>. Andmeid uuendatakse iga ööpäev kell 03:00 UTC.</p>
     </section>
     <script type="application/json" id="chart-data" set:html={JSON.stringify(chartData)}></script>
     <script>
