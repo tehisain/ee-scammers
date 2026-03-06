@@ -16,14 +16,14 @@
 
 - [ ] **VIZ-01**: Double line chart displays monthly data points for both scam losses and pension contributions on one chart
 - [ ] **VIZ-02**: Chart tooltips show exact euro values on hover and touch (mobile)
-- [ ] **VIZ-03**: Plain-text summary statement in Estonian shows the comparison (e.g. "Petturid varastasid [X]% pensionimaksetest sel kuul")
+- [x] **VIZ-03**: Plain-text summary statement in Estonian shows the comparison (e.g. "Petturid varastasid [X]% pensionimaksetest sel kuul")
 - [ ] **VIZ-04**: Chart is responsive and usable on mobile
 
 ### Site / Trust
 
 - [ ] **SITE-01**: All UI text, labels, and explanations are in Estonian
-- [ ] **SITE-02**: Data source attribution with links to politsei.ee and pensionikeskus.ee
-- [ ] **SITE-03**: Methodology section explains in plain language how data is collected, parsed, and aggregated
+- [x] **SITE-02**: Data source attribution with links to politsei.ee and pensionikeskus.ee
+- [x] **SITE-03**: Methodology section explains in plain language how data is collected, parsed, and aggregated
 - [ ] **SITE-04**: Open Graph meta tags with a static chart preview image for social sharing (Facebook, Telegram, Messenger)
 - [x] **SITE-05**: Site deployed to GitHub Pages via GitHub Actions
 
@@ -62,11 +62,11 @@
 | SITE-05 | Phase 2 | Complete |
 | VIZ-01 | Phase 3 | Pending |
 | VIZ-02 | Phase 3 | Pending |
-| VIZ-03 | Phase 3 | Pending |
+| VIZ-03 | Phase 3 | Complete |
 | VIZ-04 | Phase 3 | Pending |
 | SITE-01 | Phase 3 | Pending |
-| SITE-02 | Phase 3 | Pending |
-| SITE-03 | Phase 3 | Pending |
+| SITE-02 | Phase 3 | Complete |
+| SITE-03 | Phase 3 | Complete |
 | SITE-04 | Phase 3 | Pending |
 
 **Coverage:**
