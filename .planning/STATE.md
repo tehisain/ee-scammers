@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-site-W0-PLAN.md
-last_updated: "2026-03-06T18:09:03.139Z"
+stopped_at: Completed 03-site-03-01-PLAN.md
+last_updated: "2026-03-06T18:11:08.425Z"
 last_activity: 2026-03-06 — Plan 01-01 complete
 progress:
   total_phases: 3
   completed_phases: 2
   total_plans: 10
-  completed_plans: 8
+  completed_plans: 9
   percent: 10
 ---
 
@@ -56,6 +56,7 @@ Progress: [█░░░░░░░░░] 10%
 | Phase 02-automation P01 | 1 | 1 tasks | 1 files |
 | Phase 02-automation P02 | 2 | 2 tasks | 1 files |
 | Phase 03-site PW0 | 2 | 2 tasks | 6 files |
+| Phase 03-site P01 | 4 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,9 @@ Recent decisions affecting current work:
 - [Phase 03-site]: summarySentence() takes last qualifying entry from filtered array; filter: scamEur !== null && scamEur > 0 && pensionEur > 0
 - [Phase 03-site]: MONTH_GENITIVE exported as named export for reuse in Astro components
 - [Phase 03-site]: [W0]: page.test.ts uses early-return guard (not test.skip) so tests pass vacuously before build
+- [Phase 03-site]: base: '/ee-scammers' set in astro.config.mjs — repo is a project page, not username.github.io
+- [Phase 03-site]: Data injected via DOM JSON element (<script type=application/json>) — define:vars breaks ESM imports in Astro script blocks
+- [Phase 03-site]: OG image URL uses new URL('og-preview.png', Astro.site) for absolute URL with base path
 
 ### Pending Todos
 
@@ -94,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-06T18:09:03.137Z
-Stopped at: Completed 03-site-W0-PLAN.md
+Last session: 2026-03-06T18:11:08.423Z
+Stopped at: Completed 03-site-03-01-PLAN.md
 Resume file: None

@@ -74,4 +74,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Scrapers | 5/5 | Complete   | 2026-03-06 |
 | 2. Automation | 2/2 | Complete   | 2026-03-06 |
-| 3. Site | 0/3 | Not started | - |
+| 3. Site | 2/3 | In Progress|  |
