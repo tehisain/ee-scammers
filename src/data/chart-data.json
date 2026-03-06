@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-03-06T11:04:21.819Z",
+  "months": [
+    {
+      "month": "2025-04",
+      "pensionEur": 49075647,
+      "scamEur": null
+    },
+    {
+      "month": "2025-05",
+      "pensionEur": 50682073,
+      "scamEur": null
+    },
+    {
+      "month": "2025-06",
+      "pensionEur": 48885086,
+      "scamEur": null
+    },
+    {
+      "month": "2025-07",
+      "pensionEur": 50708949,
+      "scamEur": null
+    },
+    {
+      "month": "2025-08",
+      "pensionEur": 49523918,
+      "scamEur": null
+    },
+    {
+      "month": "2025-09",
+      "pensionEur": 47824303,
+      "scamEur": null
+    },
+    {
+      "month": "2025-10",
+      "pensionEur": 48715725,
+      "scamEur": 2636999
+    },
+    {
+      "month": "2025-11",
+      "pensionEur": 48678281,
+      "scamEur": 2474494
+    },
+    {
+      "month": "2025-12",
+      "pensionEur": 49239525,
+      "scamEur": 1629348
+    },
+    {
+      "month": "2026-01",
+      "pensionEur": 52193060,
+      "scamEur": 900824
+    },
+    {
+      "month": "2026-02",
+      "pensionEur": 49546839,
+      "scamEur": 1998685
+    },
+    {
+      "month": "2026-03",
+      "pensionEur": 0,
+      "scamEur": 121368
+    }
+  ]
+}
