@@ -10,7 +10,7 @@ Three phases deliver the site end-to-end. First, scrapers are built and validate
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Scrapers** - Build and validate both data scrapers; produce real committed JSON
+- [x] **Phase 1: Scrapers** - Build and validate both data scrapers; produce real committed JSON (completed 2026-03-06)
 - [ ] **Phase 2: Automation** - Wire nightly GitHub Actions pipeline and GitHub Pages deploy
 - [ ] **Phase 3: Site** - Build the Astro site with chart, Estonian copy, and all trust signals
 
@@ -63,6 +63,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scrapers | 4/5 | In Progress|  |
+| 1. Scrapers | 5/5 | Complete   | 2026-03-06 |
 | 2. Automation | 0/TBD | Not started | - |
 | 3. Site | 0/TBD | Not started | - |

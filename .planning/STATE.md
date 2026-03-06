@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-scrapers/01-04-PLAN.md
-last_updated: "2026-03-06T11:03:14.387Z"
+stopped_at: Completed 01-scrapers/01-05-PLAN.md
+last_updated: "2026-03-06T11:05:35.570Z"
 last_activity: 2026-03-06 — Plan 01-01 complete
 progress:
   total_phases: 3
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 5
-  completed_plans: 4
+  completed_plans: 5
   percent: 10
 ---
 
@@ -52,6 +52,7 @@ Progress: [█░░░░░░░░░] 10%
 *Updated after each plan completion*
 | Phase 01-scrapers P02 | 4 | 1 tasks | 1 files |
 | Phase 01-scrapers P04 | 1 min | 1 tasks | 1 files |
+| Phase 01-scrapers P05 | 525611min | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,8 @@ Recent decisions affecting current work:
 - [Phase 01-scrapers]: Periods API returns newest-first; period map lookup by YYYY-MM key works regardless of iteration order
 - [Phase 01-scrapers]: Both type F (investment funds) and type P (PIK accounts) summed — verified live against Feb 2026 API data
 - [Phase 01-scrapers]: JSONL reader substituted for Playwright scraper — pre-scraped data in scam_amounts.jsonl eliminates browser automation need
+- [Phase 01-05]: Scrapers run sequentially to avoid API contention; missing pension months default to pensionEur=0 so police data is not dropped
+- [Phase 01-05]: chart-data.json committed to repo so Astro build has seed data without live network access
 
 ### Pending Todos
 
@@ -81,6 +84,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-06T11:03:14.386Z
-Stopped at: Completed 01-scrapers/01-04-PLAN.md
+Last session: 2026-03-06T11:05:35.569Z
+Stopped at: Completed 01-scrapers/01-05-PLAN.md
 Resume file: None
