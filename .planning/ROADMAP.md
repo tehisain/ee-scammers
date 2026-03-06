@@ -63,6 +63,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scrapers | 2/5 | In Progress|  |
+| 1. Scrapers | 4/5 | In Progress|  |
 | 2. Automation | 0/TBD | Not started | - |
 | 3. Site | 0/TBD | Not started | - |
