@@ -1,108 +1,52 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.0
-milestone_name: milestone
-status: executing
-stopped_at: Completed 03-site-03-03-PLAN.md
-last_updated: "2026-03-06T18:47:29.745Z"
-last_activity: 2026-03-06 — Plan 01-01 complete
+milestone_name: MVP
+status: complete
+stopped_at: v1.0 milestone archived
+last_updated: "2026-03-06T20:47:00.000Z"
+last_activity: 2026-03-06 — v1.0 MVP shipped
 progress:
   total_phases: 3
   completed_phases: 3
   total_plans: 11
   completed_plans: 11
-  percent: 10
+  percent: 100
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-05)
+See: .planning/PROJECT.md (updated 2026-03-06 after v1.0 milestone)
 
 **Core value:** Make the scale of scam losses feel real by showing them alongside monthly second pillar pension contributions on a single chart.
-**Current focus:** Phase 1 - Scrapers
+**Current focus:** Planning next milestone
 
 ## Current Position
 
-Phase: 1 of 3 (Scrapers)
-Plan: 1 of TBD in current phase
-Status: In progress — 01-01 complete, ready for 01-02
-Last activity: 2026-03-06 — Plan 01-01 complete
+Milestone v1.0 MVP is complete and archived.
+All 3 phases and 11 plans shipped on 2026-03-06.
+Site live at: https://maidok.github.io/ee-scammers/
 
-Progress: [█░░░░░░░░░] 10%
-
-## Performance Metrics
-
-**Velocity:**
-- Total plans completed: 1
-- Average duration: 2 min
-- Total execution time: 0.03 hours
-
-**By Phase:**
-
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| 01-scrapers | 1 | 2 min | 2 min |
-
-**Recent Trend:**
-- Last 5 plans: 01-01 (2 min)
-- Trend: -
-
-*Updated after each plan completion*
-| Phase 01-scrapers P02 | 4 | 1 tasks | 1 files |
-| Phase 01-scrapers P04 | 1 min | 1 tasks | 1 files |
-| Phase 01-scrapers P05 | 525611min | 1 tasks | 2 files |
-| Phase 02-automation P01 | 1 | 1 tasks | 1 files |
-| Phase 02-automation P02 | 2 | 2 tasks | 1 files |
-| Phase 03-site PW0 | 2 | 2 tasks | 6 files |
-| Phase 03-site P01 | 4 | 2 tasks | 5 files |
-| Phase 03-site P02 | 8 | 2 tasks | 4 files |
-| Phase 03-site P03 | 3 | 1 tasks | 3 files |
+Progress: [██████████] 100%
 
 ## Accumulated Context
 
 ### Decisions
 
-Decisions are logged in PROJECT.md Key Decisions table.
-Recent decisions affecting current work:
-
-- [Phase 1]: pensionikeskus.ee has a public JSON API at `/ws/et/stats/receipt-statistics` — no browser needed for pension data
-- [Phase 1]: politsei.ee renders via JS and embeds totals in prose — Playwright + regex required; do manual article discovery before writing extraction code
-- [Phase 1]: Police article extraction patterns are the primary unknown — read 6-12 months of articles before coding
-- [01-01]: Used Zod 4 import style (`import * as z from "zod"`) for ESM compatibility
-- [01-01]: scamEur typed as number|null (not optional) to distinguish missing data from zero
-- [01-01]: ChartDataSchema enforces minimum 6 entries to catch stub/truncated output
-- [Phase 01-scrapers]: Periods API returns newest-first; period map lookup by YYYY-MM key works regardless of iteration order
-- [Phase 01-scrapers]: Both type F (investment funds) and type P (PIK accounts) summed — verified live against Feb 2026 API data
-- [Phase 01-scrapers]: JSONL reader substituted for Playwright scraper — pre-scraped data in scam_amounts.jsonl eliminates browser automation need
-- [Phase 01-05]: Scrapers run sequentially to avoid API contention; missing pension months default to pensionEur=0 so police data is not dropped
-- [Phase 01-05]: chart-data.json committed to repo so Astro build has seed data without live network access
-- [Phase 02-automation]: Used liskin/gh-workflow-keepalive@v1 (gautamkrishnar/keepalive-workflow is ToS-suspended)
-- [Phase 02-automation]: [02-01]: Keepalive job guarded by github.event_name == 'schedule' to skip on workflow_dispatch
-- [Phase 02-automation]: [02-01]: Data commit includes [skip ci] to prevent deploy.yml triggering on nightly scrape
-- [Phase 02-automation]: Used actions/deploy-pages@v4 (v3 deprecated Jan 30 2025); OIDC deploy via environment: github-pages; paths-ignore: src/data/** prevents data commits triggering deploys; temporary artifact path: . to be replaced by dist/ in Phase 3
-- [Phase 03-site]: summarySentence() takes last qualifying entry from filtered array; filter: scamEur !== null && scamEur > 0 && pensionEur > 0
-- [Phase 03-site]: MONTH_GENITIVE exported as named export for reuse in Astro components
-- [Phase 03-site]: [W0]: page.test.ts uses early-return guard (not test.skip) so tests pass vacuously before build
-- [Phase 03-site]: base: '/ee-scammers' set in astro.config.mjs — repo is a project page, not username.github.io
-- [Phase 03-site]: Data injected via DOM JSON element (<script type=application/json>) — define:vars breaks ESM imports in Astro script blocks
-- [Phase 03-site]: OG image URL uses new URL('og-preview.png', Astro.site) for absolute URL with base path
-- [Phase 03-site]: Strip /ee-scammers base path in og-screenshot server so Astro project-page assets load correctly under the local static server
-- [Phase 03-site]: [03-02]: Fix set:text → set:html in index.astro to prevent JSON HTML-entity encoding bug that broke JSON.parse client-side
-- [Phase 03-site]: Option A chosen: new URL('/ee-scammers/og-preview.png', Astro.site) for og:image — hardcoded base path is intentional, consistent with project-page deployment
+All decisions logged in PROJECT.md Key Decisions table.
 
 ### Pending Todos
 
-None yet.
+None.
 
 ### Blockers/Concerns
 
-- [Phase 1]: politsei.ee lazy-load pagination strategy (archive URLs vs programmatic scroll) needs confirmation on live site before implementing
-- [Phase 1]: Pension fund aggregation logic (which `type` values to sum) needs verification against a live API call
+None — v1.0 shipped cleanly.
 
 ## Session Continuity
 
-Last session: 2026-03-06T18:42:45.323Z
-Stopped at: Completed 03-site-03-03-PLAN.md
-Resume file: None
+Last session: 2026-03-06
+Stopped at: v1.0 milestone archived
+Resume: Run `/gsd:new-milestone` to start v1.1
