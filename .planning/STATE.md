@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-site-03-02-PLAN.md
-last_updated: "2026-03-06T18:20:45.749Z"
+stopped_at: Completed 03-site-03-03-PLAN.md
+last_updated: "2026-03-06T18:42:45.325Z"
 last_activity: 2026-03-06 — Plan 01-01 complete
 progress:
   total_phases: 3
   completed_phases: 3
-  total_plans: 10
-  completed_plans: 10
+  total_plans: 11
+  completed_plans: 11
   percent: 10
 ---
 
@@ -58,6 +58,7 @@ Progress: [█░░░░░░░░░] 10%
 | Phase 03-site PW0 | 2 | 2 tasks | 6 files |
 | Phase 03-site P01 | 4 | 2 tasks | 5 files |
 | Phase 03-site P02 | 8 | 2 tasks | 4 files |
+| Phase 03-site P03 | 3 | 1 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -89,6 +90,7 @@ Recent decisions affecting current work:
 - [Phase 03-site]: OG image URL uses new URL('og-preview.png', Astro.site) for absolute URL with base path
 - [Phase 03-site]: Strip /ee-scammers base path in og-screenshot server so Astro project-page assets load correctly under the local static server
 - [Phase 03-site]: [03-02]: Fix set:text → set:html in index.astro to prevent JSON HTML-entity encoding bug that broke JSON.parse client-side
+- [Phase 03-site]: Option A chosen: new URL('/ee-scammers/og-preview.png', Astro.site) for og:image — hardcoded base path is intentional, consistent with project-page deployment
 
 ### Pending Todos
 
@@ -101,6 +103,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-06T18:20:45.748Z
-Stopped at: Completed 03-site-03-02-PLAN.md
+Last session: 2026-03-06T18:42:45.323Z
+Stopped at: Completed 03-site-03-03-PLAN.md
 Resume file: None
