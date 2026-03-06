@@ -9,7 +9,7 @@ requires:
   - phase: 03-site-03-01
     provides: Astro site with og:image meta tag and base path configuration
 provides:
-  - Correct og:image absolute URL https://maidok.github.io/ee-scammers/og-preview.png in built dist/index.html
+  - Correct og:image absolute URL https://tehisain.github.io/ee-scammers/og-preview.png in built dist/index.html
 affects: []
 
 # Tech tracking
@@ -49,7 +49,7 @@ completed: 2026-03-06
 - **Files modified:** 3 (src/pages/index.astro, dist/index.html, dist/og-preview.png)
 
 ## Accomplishments
-- Fixed og:image URL from `https://maidok.github.io/og-preview.png` (404 on deploy) to `https://maidok.github.io/ee-scammers/og-preview.png`
+- Fixed og:image URL from `https://tehisain.github.io/og-preview.png` (404 on deploy) to `https://tehisain.github.io/ee-scammers/og-preview.png`
 - Rebuilt dist/index.html with corrected og:image meta tag
 - All 7 vitest tests continue to pass (regression check clean)
 
@@ -63,7 +63,7 @@ Each task was committed atomically:
 
 ## Files Created/Modified
 - `src/pages/index.astro` - Changed `new URL('og-preview.png', Astro.site)` to `new URL('/ee-scammers/og-preview.png', Astro.site)`
-- `dist/index.html` - Rebuilt output now emits `og:image content="https://maidok.github.io/ee-scammers/og-preview.png"`
+- `dist/index.html` - Rebuilt output now emits `og:image content="https://tehisain.github.io/ee-scammers/og-preview.png"`
 - `dist/og-preview.png` - OG screenshot regenerated as part of build
 
 ## Decisions Made
@@ -74,7 +74,7 @@ Each task was committed atomically:
 None - plan executed exactly as written.
 
 ## Issues Encountered
-- Plan documentation references `tehisain.github.io` but `astro.config.mjs` uses `maidok.github.io` — the fix is correct regardless; the base path `/ee-scammers` is what matters, and it is now included. No action required.
+- Plan documentation references `tehisain.github.io` but `astro.config.mjs` uses `tehisain.github.io` — the fix is correct regardless; the base path `/ee-scammers` is what matters, and it is now included. No action required.
 
 ## User Setup Required
 None - no external service configuration required.

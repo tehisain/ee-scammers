@@ -27,7 +27,7 @@ See: .planning/PROJECT.md (updated 2026-03-06 after v1.0 milestone)
 
 Milestone v1.0 MVP is complete and archived.
 All 3 phases and 11 plans shipped on 2026-03-06.
-Site live at: https://maidok.github.io/ee-scammers/
+Site live at: https://tehisain.github.io/ee-scammers/
 
 Progress: [██████████] 100%
 

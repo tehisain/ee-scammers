@@ -49,7 +49,7 @@ Make the scale of scam losses feel real by showing them alongside something Esto
 Shipped v1.0 with ~740 LOC TypeScript/Astro over 2 days (2026-03-05 to 2026-03-06).
 Tech stack: Astro 5, Chart.js 4, TypeScript ESM, Zod 4, GitHub Actions, GitHub Pages.
 Police data: pre-scraped JSONL (Oct 2025–Mar 2026). Pension data: live API (12 months).
-Site live at: https://maidok.github.io/ee-scammers/
+Site live at: https://tehisain.github.io/ee-scammers/
 
 ## Constraints
 

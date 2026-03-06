@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://maidok.github.io',
+  site: 'https://tehisain.github.io',
   base: '/ee-scammers',
 });

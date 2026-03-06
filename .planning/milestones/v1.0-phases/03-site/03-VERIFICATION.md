@@ -7,7 +7,7 @@ re_verification:
   previous_status: gaps_found
   previous_score: 10/11
   gaps_closed:
-    - "Open Graph meta tag in dist/index.html now references the correct absolute URL https://maidok.github.io/ee-scammers/og-preview.png (base path included)"
+    - "Open Graph meta tag in dist/index.html now references the correct absolute URL https://tehisain.github.io/ee-scammers/og-preview.png (base path included)"
   gaps_remaining: []
   regressions: []
 human_verification:
@@ -40,7 +40,7 @@ human_verification:
 | 6 | `npx vitest run` passes — all 7 tests green | VERIFIED | All 7 tests pass: 4 summarySentence unit tests + 3 page smoke tests |
 | 7 | `npm run build` produces dist/og-preview.png at 1200x630px | VERIFIED | dist/og-preview.png 48KB; `file` confirms PNG image data, 1200 x 630, 8-bit/color RGB |
 | 8 | deploy.yml build job installs Node, runs npm ci, installs Chromium, runs npm run build, uploads dist/ | VERIFIED | deploy.yml contains actions/setup-node, npm ci, `npx playwright install chromium --with-deps`, npm run build, `path: dist/` |
-| 9 | Open Graph meta tag in dist/index.html references an absolute og-preview.png URL with base path | VERIFIED | dist/index.html og:image = `https://maidok.github.io/ee-scammers/og-preview.png`; src/pages/index.astro line 6 uses `new URL('/ee-scammers/og-preview.png', Astro.site)` |
+| 9 | Open Graph meta tag in dist/index.html references an absolute og-preview.png URL with base path | VERIFIED | dist/index.html og:image = `https://tehisain.github.io/ee-scammers/og-preview.png`; src/pages/index.astro line 6 uses `new URL('/ee-scammers/og-preview.png', Astro.site)` |
 | 10 | Chart.js tooltips show exact euro values on hover/touch (VIZ-02) | VERIFIED | tooltip.callbacks.label formats values with `toLocaleString('et-EE')` and `€`; null values show "andmed puuduvad" |
 | 11 | Chart is responsive and usable on mobile (VIZ-04) | VERIFIED | `@media (max-width: 480px)` sets .chart-container height to 260px; `responsive: true`, `maintainAspectRatio: false` in Chart.js options |
 
@@ -58,7 +58,7 @@ human_verification:
 | `vitest.config.ts` | Vitest configuration | VERIFIED | Covers src/**/*.test.ts (unchanged) |
 | `scripts/og-screenshot.ts` | Post-build Playwright screenshot producing dist/og-preview.png | VERIFIED | Full implementation: Node HTTP server, waitForSelector sentinel, 1200x630 clip |
 | `.github/workflows/deploy.yml` | Complete build job with Node setup, npm ci, Playwright install, npm run build, dist/ upload | VERIFIED | All required steps confirmed present |
-| `dist/index.html` | Built output with correct og:image meta tag | VERIFIED | og:image content = `https://maidok.github.io/ee-scammers/og-preview.png` |
+| `dist/index.html` | Built output with correct og:image meta tag | VERIFIED | og:image content = `https://tehisain.github.io/ee-scammers/og-preview.png` |
 
 ### Key Link Verification
 
@@ -67,7 +67,7 @@ human_verification:
 | src/pages/index.astro | src/data/chart-data.json | import chartData from '../data/chart-data.json' | WIRED | Line 2 in frontmatter; used in summarySentence call and JSON.stringify (unchanged) |
 | src/pages/index.astro | src/utils/summary.ts | import { summarySentence } from '../utils/summary' | WIRED | Line 3 in frontmatter; used on line 5 (unchanged) |
 | src/pages/index.astro | chart.js/auto | `<script> import Chart from 'chart.js/auto'` | WIRED | Line 55 in script block; new Chart() called on line 70 (unchanged) |
-| index.astro head | og-preview.png | og:image meta tag | WIRED | Line 6: `new URL('/ee-scammers/og-preview.png', Astro.site)` — base path now correctly included; dist/index.html emits `https://maidok.github.io/ee-scammers/og-preview.png` |
+| index.astro head | og-preview.png | og:image meta tag | WIRED | Line 6: `new URL('/ee-scammers/og-preview.png', Astro.site)` — base path now correctly included; dist/index.html emits `https://tehisain.github.io/ee-scammers/og-preview.png` |
 | package.json build script | scripts/og-screenshot.ts | astro build && tsx scripts/og-screenshot.ts | WIRED | package.json line 7: `"build": "astro build && tsx scripts/og-screenshot.ts"` (unchanged) |
 | scripts/og-screenshot.ts | dist/og-preview.png | Playwright page.screenshot() | WIRED | screenshot call with `clip: { x:0, y:0, width:1200, height:630 }` (unchanged) |
 | deploy.yml build job | dist/ | actions/upload-pages-artifact@v4 path: dist/ | WIRED | `path: dist/` confirmed (unchanged) |
@@ -85,7 +85,7 @@ human_verification:
 | SITE-01 | 03-01 | All UI text in Estonian | SATISFIED | All copy in index.astro is Estonian: headline, section headings, methodology, attribution, tooltip messages |
 | SITE-02 | 03-W0, 03-01 | Attribution links to politsei.ee and pensionikeskus.ee | SATISFIED | Both links in dist/index.html; vitest page smoke tests pass |
 | SITE-03 | 03-W0, 03-01 | Methodology section explains data collection | SATISFIED | Full methodology section with three paragraphs; "Andmete kogumise" confirmed in dist/index.html |
-| SITE-04 | 03-02, 03-03 | Open Graph meta tags with chart preview image | SATISFIED | og:image tag emits `https://maidok.github.io/ee-scammers/og-preview.png` (correct URL with base path); dist/og-preview.png is 1200x630 PNG at 48KB |
+| SITE-04 | 03-02, 03-03 | Open Graph meta tags with chart preview image | SATISFIED | og:image tag emits `https://tehisain.github.io/ee-scammers/og-preview.png` (correct URL with base path); dist/og-preview.png is 1200x630 PNG at 48KB |
 
 **Orphaned requirements check:** SITE-05 (GitHub Pages deployment) is assigned to Phase 2 per REQUIREMENTS.md traceability table — correctly out of Phase 3 scope. All 8 Phase 3 requirement IDs (VIZ-01 through VIZ-04, SITE-01 through SITE-04) are accounted for.
 
@@ -120,7 +120,7 @@ const ogImage = new URL('/ee-scammers/og-preview.png', Astro.site).toString();
 
 `dist/index.html` emits:
 ```
-<meta property="og:image" content="https://maidok.github.io/ee-scammers/og-preview.png">
+<meta property="og:image" content="https://tehisain.github.io/ee-scammers/og-preview.png">
 ```
 
 All 8 Phase 3 requirement IDs are satisfied. All 7 vitest tests pass. All key links are wired. Automated verification is complete — two human checks remain to confirm visual rendering quality and OG image content.
