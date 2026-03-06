@@ -24,8 +24,9 @@ Wire the nightly GitHub Actions cron that runs both scrapers, commits updated ch
 - Commit author: github-actions[bot] using the workflow's built-in GITHUB_TOKEN — no custom identity needed
 
 ### Keepalive mechanism
-- Use `gautamkrishnar/keepalive-workflow` action (third-party, no commit needed, re-enables via GitHub API)
-- Runs on a monthly schedule to prevent cron suspension after 60 days of repo inactivity
+- Use `liskin/gh-workflow-keepalive@v1` action (third-party, no commit needed, re-enables via GitHub API)
+- Note: `gautamkrishnar/keepalive-workflow` (original discussion choice) was disabled by GitHub Staff for ToS violation in early 2025 — `liskin/gh-workflow-keepalive@v1` is the direct replacement
+- Runs on a schedule trigger (job condition: `if: github.event_name == 'schedule'`) to prevent cron suspension after 60 days of repo inactivity
 
 ### Claude's Discretion
 - Exact cron syntax and schedule timing (roadmap specifies 03:00 UTC — use that)
