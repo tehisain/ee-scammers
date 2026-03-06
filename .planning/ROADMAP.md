@@ -42,7 +42,11 @@ Plans:
   1. A GitHub Actions cron job runs at 03:00 UTC nightly, executes both scrapers, and commits updated data if it changed
   2. Every commit to main triggers an automatic GitHub Pages rebuild and the site is reachable at its public URL within 5 minutes
   3. The keepalive workflow is present and prevents the cron from being suspended after 60 days of no pushes
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — scrape.yml: nightly cron + conditional commit + keepalive job (PIPE-04)
+- [ ] 02-02-PLAN.md — deploy.yml: Pages deploy skeleton + repository Pages source setup (SITE-05)
 
 ### Phase 3: Site
 **Goal**: A complete, live Estonian-language awareness site displays the dual-line chart with all trust signals and is ready to share
@@ -64,5 +68,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scrapers | 5/5 | Complete   | 2026-03-06 |
-| 2. Automation | 0/TBD | Not started | - |
+| 2. Automation | 0/2 | Not started | - |
 | 3. Site | 0/TBD | Not started | - |
