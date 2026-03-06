@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: "Completed 01-scrapers/01-01-PLAN.md"
-last_updated: "2026-03-06T06:50:34Z"
+status: executing
+stopped_at: Completed 01-scrapers/01-02-PLAN.md
+last_updated: "2026-03-06T06:54:46.076Z"
 last_activity: 2026-03-06 — Plan 01-01 complete
 progress:
   total_phases: 3
   completed_phases: 0
-  total_plans: 1
-  completed_plans: 1
+  total_plans: 5
+  completed_plans: 2
   percent: 10
 ---
 
@@ -50,6 +50,7 @@ Progress: [█░░░░░░░░░] 10%
 - Trend: -
 
 *Updated after each plan completion*
+| Phase 01-scrapers P02 | 4 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -64,6 +65,8 @@ Recent decisions affecting current work:
 - [01-01]: Used Zod 4 import style (`import * as z from "zod"`) for ESM compatibility
 - [01-01]: scamEur typed as number|null (not optional) to distinguish missing data from zero
 - [01-01]: ChartDataSchema enforces minimum 6 entries to catch stub/truncated output
+- [Phase 01-scrapers]: Periods API returns newest-first; period map lookup by YYYY-MM key works regardless of iteration order
+- [Phase 01-scrapers]: Both type F (investment funds) and type P (PIK accounts) summed — verified live against Feb 2026 API data
 
 ### Pending Todos
 
@@ -76,6 +79,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-06T06:50:34Z
-Stopped at: Completed 01-scrapers/01-01-PLAN.md
-Resume file: .planning/phases/01-scrapers/01-01-SUMMARY.md
+Last session: 2026-03-06T06:54:46.075Z
+Stopped at: Completed 01-scrapers/01-02-PLAN.md
+Resume file: None

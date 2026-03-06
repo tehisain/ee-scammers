@@ -8,7 +8,7 @@
 ### Data Pipeline
 
 - [ ] **PIPE-01**: Nightly GitHub Actions job scrapes politsei.ee news articles and extracts monthly scam loss totals (via Playwright + Cheerio)
-- [ ] **PIPE-02**: Nightly job fetches pensionikeskus.ee JSON API and aggregates monthly pension contribution totals across all funds
+- [x] **PIPE-02**: Nightly job fetches pensionikeskus.ee JSON API and aggregates monthly pension contribution totals across all funds
 - [x] **PIPE-03**: Scraper writes combined monthly data to a committed JSON file in the repo
 - [ ] **PIPE-04**: CI keepalive action prevents GitHub Actions cron from being silently disabled after 60 days of no commits
 
@@ -56,7 +56,7 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | PIPE-01 | Phase 1 | Pending |
-| PIPE-02 | Phase 1 | Pending |
+| PIPE-02 | Phase 1 | Complete |
 | PIPE-03 | Phase 1 | Complete (01-01) |
 | PIPE-04 | Phase 2 | Pending |
 | SITE-05 | Phase 2 | Pending |
