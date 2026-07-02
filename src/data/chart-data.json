@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T07:16:46.212Z",
+  "generatedAt": "2026-07-02T06:46:24.881Z",
   "months": [
     {
       "month": "2025-08",
@@ -55,6 +55,11 @@
       "month": "2026-06",
       "pensionEur": 52598188,
       "scamEur": 606785
+    },
+    {
+      "month": "2026-07",
+      "pensionEur": 0,
+      "scamEur": 13706
     }
   ]
 }
